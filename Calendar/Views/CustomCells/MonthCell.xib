@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MonthCell" customModule="Calendar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dF-NO-FL6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTb-eP-X2u">
+                                <rect key="frame" x="16" y="10" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.2156862745" green="0.47058823529999999" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xTb-eP-X2u" firstAttribute="top" secondItem="0dF-NO-FL6" secondAttribute="top" constant="10" id="2ZC-1Q-vJW"/>
+                            <constraint firstAttribute="height" constant="40" id="4Hh-Jz-v3C"/>
+                            <constraint firstAttribute="bottom" secondItem="xTb-eP-X2u" secondAttribute="bottom" id="KiN-Ph-zxQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xTb-eP-X2u" secondAttribute="trailing" constant="16" id="MMI-Le-yKy"/>
+                            <constraint firstItem="xTb-eP-X2u" firstAttribute="leading" secondItem="0dF-NO-FL6" secondAttribute="leading" constant="16" id="Rgd-3D-vQE"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-dB-FIJ">
+                        <rect key="frame" x="0.0" y="40" width="375" height="300"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJj-0M-yJD" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XLy-ll-9Mc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TJ-r5-NFQ" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGU-Pp-117">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="MGU-Pp-117" firstAttribute="top" secondItem="6TJ-r5-NFQ" secondAttribute="top" constant="5" id="6nA-fp-zFs"/>
+                                                    <constraint firstItem="MGU-Pp-117" firstAttribute="leading" secondItem="6TJ-r5-NFQ" secondAttribute="leading" constant="5" id="Clw-UZ-3AE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MGU-Pp-117" secondAttribute="bottom" constant="5" id="Lzd-oK-lg9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MGU-Pp-117" secondAttribute="trailing" constant="5" id="UzI-aA-dhE"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="MGU-Pp-117" id="4Lw-Zo-CYK"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Mh-il-1TJ" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32l-N9-teJ">
+                                                        <rect key="frame" x="5" y="5" width="43" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="32l-N9-teJ" firstAttribute="top" secondItem="7Mh-il-1TJ" secondAttribute="top" constant="5" id="WBJ-gD-2sy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="32l-N9-teJ" secondAttribute="trailing" constant="5" id="YvI-rJ-3w9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="32l-N9-teJ" secondAttribute="bottom" constant="5" id="cye-ZY-VMf"/>
+                                                    <constraint firstItem="32l-N9-teJ" firstAttribute="leading" secondItem="7Mh-il-1TJ" secondAttribute="leading" constant="5" id="zJp-8G-ZBl"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="32l-N9-teJ" id="ndE-VO-Oo0"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRE-CK-ogK" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-TJ-SY1">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="JUx-TJ-SY1" firstAttribute="top" secondItem="GRE-CK-ogK" secondAttribute="top" constant="5" id="HXQ-tZ-E4b"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JUx-TJ-SY1" secondAttribute="trailing" constant="5" id="Yix-Oy-bE6"/>
+                                                    <constraint firstItem="JUx-TJ-SY1" firstAttribute="leading" secondItem="GRE-CK-ogK" secondAttribute="leading" constant="5" id="a7q-d2-hOV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JUx-TJ-SY1" secondAttribute="bottom" constant="5" id="kKg-QE-USv"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="JUx-TJ-SY1" id="DtX-9y-pDX"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojz-6S-1yv" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSY-Rg-J5w">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="qSY-Rg-J5w" secondAttribute="bottom" constant="5" id="EOA-tS-u7P"/>
+                                                    <constraint firstItem="qSY-Rg-J5w" firstAttribute="leading" secondItem="Ojz-6S-1yv" secondAttribute="leading" constant="5" id="kyI-i0-zmA"/>
+                                                    <constraint firstItem="qSY-Rg-J5w" firstAttribute="top" secondItem="Ojz-6S-1yv" secondAttribute="top" constant="5" id="nUq-9o-1gs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qSY-Rg-J5w" secondAttribute="trailing" constant="5" id="sXt-xr-h1n"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="qSY-Rg-J5w" id="DiI-iu-4U7"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dhe-JV-Iz7" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-VT-5bu">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="EDK-VT-5bu" firstAttribute="leading" secondItem="Dhe-JV-Iz7" secondAttribute="leading" constant="5" id="5H1-OJ-e4k"/>
+                                                    <constraint firstItem="EDK-VT-5bu" firstAttribute="top" secondItem="Dhe-JV-Iz7" secondAttribute="top" constant="5" id="8w1-aC-66X"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EDK-VT-5bu" secondAttribute="trailing" constant="5" id="QiR-y9-0VT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="EDK-VT-5bu" secondAttribute="bottom" constant="5" id="iu3-Em-sXV"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="EDK-VT-5bu" id="PGA-2b-2La"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxf-e9-ypd" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-dy-KLZ">
+                                                        <rect key="frame" x="5" y="5" width="43" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Bq7-dy-KLZ" firstAttribute="leading" secondItem="qxf-e9-ypd" secondAttribute="leading" constant="5" id="6ah-KI-5hw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Bq7-dy-KLZ" secondAttribute="bottom" constant="5" id="PdB-Cn-90l"/>
+                                                    <constraint firstItem="Bq7-dy-KLZ" firstAttribute="top" secondItem="qxf-e9-ypd" secondAttribute="top" constant="5" id="XWu-D2-v8M"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Bq7-dy-KLZ" secondAttribute="trailing" constant="5" id="ncm-Cz-r7q"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Bq7-dy-KLZ" id="6dP-bs-g5Z"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn5-uv-jPX" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-uu-Ztk">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="UJQ-uu-Ztk" firstAttribute="top" secondItem="Jn5-uv-jPX" secondAttribute="top" constant="5" id="RqU-sN-Sah"/>
+                                                    <constraint firstItem="UJQ-uu-Ztk" firstAttribute="leading" secondItem="Jn5-uv-jPX" secondAttribute="leading" constant="5" id="WqD-qz-fC0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UJQ-uu-Ztk" secondAttribute="bottom" constant="5" id="dOq-WQ-5cd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UJQ-uu-Ztk" secondAttribute="trailing" constant="5" id="iza-Zb-xyg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="UJQ-uu-Ztk" id="1YP-Ig-kVk"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XLy-ll-9Mc" secondAttribute="trailing" id="O6E-AN-vHz"/>
+                                    <constraint firstItem="XLy-ll-9Mc" firstAttribute="top" secondItem="LJj-0M-yJD" secondAttribute="top" id="YFY-9K-2ex"/>
+                                    <constraint firstAttribute="bottom" secondItem="XLy-ll-9Mc" secondAttribute="bottom" id="pEu-34-Ffv"/>
+                                    <constraint firstItem="XLy-ll-9Mc" firstAttribute="leading" secondItem="LJj-0M-yJD" secondAttribute="leading" id="rP1-aE-VXS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="XLy-ll-9Mc" id="GsX-gR-86l"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpL-nV-P9v" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ab3-X6-eWS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-jr-tgr" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1t-xH-9lI">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="X1t-xH-9lI" secondAttribute="trailing" constant="5" id="QAP-65-DWo"/>
+                                                    <constraint firstItem="X1t-xH-9lI" firstAttribute="leading" secondItem="oDW-jr-tgr" secondAttribute="leading" constant="5" id="Rhq-Wg-jVx"/>
+                                                    <constraint firstItem="X1t-xH-9lI" firstAttribute="top" secondItem="oDW-jr-tgr" secondAttribute="top" constant="5" id="gfP-B8-Dmu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="X1t-xH-9lI" secondAttribute="bottom" constant="5" id="zyz-tj-UPk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="X1t-xH-9lI" id="TJc-aK-vg7"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5e-vp-OPj" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djy-LL-F7V">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="djy-LL-F7V" firstAttribute="leading" secondItem="p5e-vp-OPj" secondAttribute="leading" constant="5" id="Zdr-RU-184"/>
+                                                    <constraint firstAttribute="trailing" secondItem="djy-LL-F7V" secondAttribute="trailing" constant="5" id="l3Z-A4-IRf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="djy-LL-F7V" secondAttribute="bottom" constant="5" id="qvh-Eb-26W"/>
+                                                    <constraint firstItem="djy-LL-F7V" firstAttribute="top" secondItem="p5e-vp-OPj" secondAttribute="top" constant="5" id="zLN-MV-OTn"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="djy-LL-F7V" id="XW7-2o-SjC"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYF-Sf-9NC" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9b-FI-cQA">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="z9b-FI-cQA" secondAttribute="trailing" constant="5" id="2Ob-8k-Lax"/>
+                                                    <constraint firstAttribute="bottom" secondItem="z9b-FI-cQA" secondAttribute="bottom" constant="5" id="CuX-UY-evt"/>
+                                                    <constraint firstItem="z9b-FI-cQA" firstAttribute="top" secondItem="HYF-Sf-9NC" secondAttribute="top" constant="5" id="eiL-GS-V08"/>
+                                                    <constraint firstItem="z9b-FI-cQA" firstAttribute="leading" secondItem="HYF-Sf-9NC" secondAttribute="leading" constant="5" id="emC-Wu-5aq"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="z9b-FI-cQA" id="g9t-oT-sZk"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfJ-2Q-lT5" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ef-aZ-k6w">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="1ef-aZ-k6w" firstAttribute="leading" secondItem="VfJ-2Q-lT5" secondAttribute="leading" constant="5" id="2iu-KW-JAI"/>
+                                                    <constraint firstItem="1ef-aZ-k6w" firstAttribute="top" secondItem="VfJ-2Q-lT5" secondAttribute="top" constant="5" id="6gy-Yg-ryc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1ef-aZ-k6w" secondAttribute="trailing" constant="5" id="EEs-qg-1e0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1ef-aZ-k6w" secondAttribute="bottom" constant="5" id="LXC-iJ-j5Y"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="1ef-aZ-k6w" id="Ogu-ej-5hE"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQa-o7-xDt" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-jt-vN0">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="n5f-jt-vN0" secondAttribute="bottom" constant="5" id="9Pv-UP-CBm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="n5f-jt-vN0" secondAttribute="trailing" constant="5" id="BQo-ew-FFb"/>
+                                                    <constraint firstItem="n5f-jt-vN0" firstAttribute="leading" secondItem="rQa-o7-xDt" secondAttribute="leading" constant="5" id="VNG-7W-cXB"/>
+                                                    <constraint firstItem="n5f-jt-vN0" firstAttribute="top" secondItem="rQa-o7-xDt" secondAttribute="top" constant="5" id="w5c-oZ-kRt"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="n5f-jt-vN0" id="vpA-jO-RbF"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etO-mf-4q2" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pl-aD-fOI">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="5Pl-aD-fOI" secondAttribute="trailing" constant="5" id="BUj-2S-MMz"/>
+                                                    <constraint firstItem="5Pl-aD-fOI" firstAttribute="top" secondItem="etO-mf-4q2" secondAttribute="top" constant="5" id="BaB-TS-4ha"/>
+                                                    <constraint firstItem="5Pl-aD-fOI" firstAttribute="leading" secondItem="etO-mf-4q2" secondAttribute="leading" constant="5" id="CI3-fk-QVh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="5Pl-aD-fOI" secondAttribute="bottom" constant="5" id="Vis-zi-TYq"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="5Pl-aD-fOI" id="g79-2X-u5s"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRB-rb-GFK" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hA-yE-l4F">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="8hA-yE-l4F" secondAttribute="trailing" constant="5" id="12t-M2-tWi"/>
+                                                    <constraint firstItem="8hA-yE-l4F" firstAttribute="leading" secondItem="uRB-rb-GFK" secondAttribute="leading" constant="5" id="KAT-t8-aZS"/>
+                                                    <constraint firstItem="8hA-yE-l4F" firstAttribute="top" secondItem="uRB-rb-GFK" secondAttribute="top" constant="5" id="hqk-b0-sYq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8hA-yE-l4F" secondAttribute="bottom" constant="5" id="q2t-yu-dP3"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="8hA-yE-l4F" id="a2K-Z7-VMf"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ab3-X6-eWS" secondAttribute="bottom" id="4ej-IZ-BXz"/>
+                                    <constraint firstItem="Ab3-X6-eWS" firstAttribute="leading" secondItem="mpL-nV-P9v" secondAttribute="leading" id="biD-9G-TFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ab3-X6-eWS" secondAttribute="trailing" id="jpL-Sr-DLt"/>
+                                    <constraint firstItem="Ab3-X6-eWS" firstAttribute="top" secondItem="mpL-nV-P9v" secondAttribute="top" id="y9d-tx-S8x"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="Ab3-X6-eWS" id="1cx-7a-OSe"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYe-U7-AeR" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VyJ-gR-SqH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlX-Ni-AkS" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-lr-iES">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Scj-lr-iES" secondAttribute="bottom" constant="5" id="1kb-8V-Ei6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Scj-lr-iES" secondAttribute="trailing" constant="5" id="3gd-dX-lmw"/>
+                                                    <constraint firstItem="Scj-lr-iES" firstAttribute="top" secondItem="AlX-Ni-AkS" secondAttribute="top" constant="5" id="DoX-7N-K7k"/>
+                                                    <constraint firstItem="Scj-lr-iES" firstAttribute="leading" secondItem="AlX-Ni-AkS" secondAttribute="leading" constant="5" id="WeF-3D-0gg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Scj-lr-iES" id="VhQ-je-5SW"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpR-DP-zRP" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-aZ-Bi6">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="eKe-aZ-Bi6" firstAttribute="top" secondItem="rpR-DP-zRP" secondAttribute="top" constant="5" id="N6v-Z6-sLS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eKe-aZ-Bi6" secondAttribute="trailing" constant="5" id="UK5-mg-1e6"/>
+                                                    <constraint firstItem="eKe-aZ-Bi6" firstAttribute="leading" secondItem="rpR-DP-zRP" secondAttribute="leading" constant="5" id="bdy-je-Jme"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eKe-aZ-Bi6" secondAttribute="bottom" constant="5" id="q1u-d4-P2u"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="eKe-aZ-Bi6" id="ieK-MI-zrv"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-Xh-s9s" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynj-3s-ji7">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ynj-3s-ji7" firstAttribute="top" secondItem="FaR-Xh-s9s" secondAttribute="top" constant="5" id="D03-aD-C6G"/>
+                                                    <constraint firstItem="Ynj-3s-ji7" firstAttribute="leading" secondItem="FaR-Xh-s9s" secondAttribute="leading" constant="5" id="RxU-Sa-bKr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ynj-3s-ji7" secondAttribute="bottom" constant="5" id="W3N-Se-kgw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ynj-3s-ji7" secondAttribute="trailing" constant="5" id="gmq-Qq-vTz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Ynj-3s-ji7" id="6Vl-5t-7sh"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6D-lm-cLg" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-wz-quL">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="kHQ-wz-quL" firstAttribute="leading" secondItem="e6D-lm-cLg" secondAttribute="leading" constant="5" id="4XB-mg-aAX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kHQ-wz-quL" secondAttribute="trailing" constant="5" id="7qS-5S-5B2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kHQ-wz-quL" secondAttribute="bottom" constant="5" id="9fw-D0-EY5"/>
+                                                    <constraint firstItem="kHQ-wz-quL" firstAttribute="top" secondItem="e6D-lm-cLg" secondAttribute="top" constant="5" id="BIt-BR-M9N"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="kHQ-wz-quL" id="aSZ-uf-Y2k"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Jy-ex-tlf" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ7-ix-kdi">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="RQ7-ix-kdi" secondAttribute="trailing" constant="5" id="dTw-wt-sFl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="RQ7-ix-kdi" secondAttribute="bottom" constant="5" id="g4Q-Qf-wTz"/>
+                                                    <constraint firstItem="RQ7-ix-kdi" firstAttribute="leading" secondItem="1Jy-ex-tlf" secondAttribute="leading" constant="5" id="oAO-JS-Ytn"/>
+                                                    <constraint firstItem="RQ7-ix-kdi" firstAttribute="top" secondItem="1Jy-ex-tlf" secondAttribute="top" constant="5" id="xaU-xd-4z1"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="RQ7-ix-kdi" id="Agk-ff-XDa"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaE-xg-rmh" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-il-8dV">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="D7o-il-8dV" secondAttribute="trailing" constant="5" id="0ig-Nc-qzg"/>
+                                                    <constraint firstItem="D7o-il-8dV" firstAttribute="leading" secondItem="jaE-xg-rmh" secondAttribute="leading" constant="5" id="FxR-n4-dbn"/>
+                                                    <constraint firstItem="D7o-il-8dV" firstAttribute="top" secondItem="jaE-xg-rmh" secondAttribute="top" constant="5" id="Qos-Wp-mec"/>
+                                                    <constraint firstAttribute="bottom" secondItem="D7o-il-8dV" secondAttribute="bottom" constant="5" id="bVb-zf-2hx"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="D7o-il-8dV" id="x3q-9G-yIM"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOK-GC-uPB" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9og-nI-cMb">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="9og-nI-cMb" firstAttribute="top" secondItem="vOK-GC-uPB" secondAttribute="top" constant="5" id="CKo-b4-Jh3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9og-nI-cMb" secondAttribute="bottom" constant="5" id="IBb-zN-61i"/>
+                                                    <constraint firstItem="9og-nI-cMb" firstAttribute="leading" secondItem="vOK-GC-uPB" secondAttribute="leading" constant="5" id="mbf-Ca-VJt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9og-nI-cMb" secondAttribute="trailing" constant="5" id="p7k-8c-ozq"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="9og-nI-cMb" id="cUc-Lk-MWp"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VyJ-gR-SqH" secondAttribute="trailing" id="Cl5-qK-LZh"/>
+                                    <constraint firstAttribute="bottom" secondItem="VyJ-gR-SqH" secondAttribute="bottom" id="PkG-Dh-9Ja"/>
+                                    <constraint firstItem="VyJ-gR-SqH" firstAttribute="leading" secondItem="AYe-U7-AeR" secondAttribute="leading" id="ite-Ec-VTV"/>
+                                    <constraint firstItem="VyJ-gR-SqH" firstAttribute="top" secondItem="AYe-U7-AeR" secondAttribute="top" id="oaZ-A7-kV0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="VyJ-gR-SqH" id="V45-IB-k2g"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3kx-hb-OMW" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="150" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nxw-59-Tev">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D72-x4-tXb" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ag-8d-otp">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="3ag-8d-otp" secondAttribute="trailing" constant="5" id="MsO-iN-pK4"/>
+                                                    <constraint firstItem="3ag-8d-otp" firstAttribute="leading" secondItem="D72-x4-tXb" secondAttribute="leading" constant="5" id="gPB-8R-VAy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3ag-8d-otp" secondAttribute="bottom" constant="5" id="j5G-yL-3ab"/>
+                                                    <constraint firstItem="3ag-8d-otp" firstAttribute="top" secondItem="D72-x4-tXb" secondAttribute="top" constant="5" id="uqg-Ie-oY1"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="3ag-8d-otp" id="RkG-xW-inN"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heB-iN-3hh" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-R9-wk5">
+                                                        <rect key="frame" x="5" y="5" width="43" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Gh5-R9-wk5" firstAttribute="top" secondItem="heB-iN-3hh" secondAttribute="top" constant="5" id="LDb-pj-VMB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gh5-R9-wk5" secondAttribute="trailing" constant="5" id="Oxf-k2-BNQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Gh5-R9-wk5" secondAttribute="bottom" constant="5" id="TIp-s3-Zts"/>
+                                                    <constraint firstItem="Gh5-R9-wk5" firstAttribute="leading" secondItem="heB-iN-3hh" secondAttribute="leading" constant="5" id="Znv-Hj-sh3"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Gh5-R9-wk5" id="owO-YB-8eM"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34h-jo-3yG" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-Ok-QqI">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="9ab-Ok-QqI" firstAttribute="top" secondItem="34h-jo-3yG" secondAttribute="top" constant="5" id="1Ji-8T-ZcI"/>
+                                                    <constraint firstItem="9ab-Ok-QqI" firstAttribute="leading" secondItem="34h-jo-3yG" secondAttribute="leading" constant="5" id="C0m-GV-nde"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9ab-Ok-QqI" secondAttribute="bottom" constant="5" id="CgZ-lF-CxV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9ab-Ok-QqI" secondAttribute="trailing" constant="5" id="peD-1q-EH4"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="9ab-Ok-QqI" id="A6S-Hu-iIX"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tlU-yl-wX8" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2q-rl-VM4">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Y2q-rl-VM4" secondAttribute="bottom" constant="5" id="8d3-MJ-LRa"/>
+                                                    <constraint firstItem="Y2q-rl-VM4" firstAttribute="leading" secondItem="tlU-yl-wX8" secondAttribute="leading" constant="5" id="eNa-II-lcs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y2q-rl-VM4" secondAttribute="trailing" constant="5" id="pia-L0-FQP"/>
+                                                    <constraint firstItem="Y2q-rl-VM4" firstAttribute="top" secondItem="tlU-yl-wX8" secondAttribute="top" constant="5" id="qBy-W4-y1Z"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Y2q-rl-VM4" id="obY-4V-xfc"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwK-Ph-paQ" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr7-cS-ULa">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="gr7-cS-ULa" firstAttribute="leading" secondItem="LwK-Ph-paQ" secondAttribute="leading" constant="5" id="dVu-wQ-sCj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gr7-cS-ULa" secondAttribute="trailing" constant="5" id="gBi-fx-mN0"/>
+                                                    <constraint firstItem="gr7-cS-ULa" firstAttribute="top" secondItem="LwK-Ph-paQ" secondAttribute="top" constant="5" id="pWi-gU-kuJ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gr7-cS-ULa" secondAttribute="bottom" constant="5" id="rwf-K5-rSp"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="gr7-cS-ULa" id="yYV-F0-fXo"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo5-dL-4nj" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-C5-b5P">
+                                                        <rect key="frame" x="5" y="5" width="43" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="v6B-C5-b5P" firstAttribute="top" secondItem="wo5-dL-4nj" secondAttribute="top" constant="5" id="3W2-Sk-Y9t"/>
+                                                    <constraint firstItem="v6B-C5-b5P" firstAttribute="leading" secondItem="wo5-dL-4nj" secondAttribute="leading" constant="5" id="JFW-DD-zzS"/>
+                                                    <constraint firstAttribute="bottom" secondItem="v6B-C5-b5P" secondAttribute="bottom" constant="5" id="Vmc-18-dKO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="v6B-C5-b5P" secondAttribute="trailing" constant="5" id="lvl-st-UQx"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="v6B-C5-b5P" id="VsV-wn-XRf"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yhs-5P-870" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzH-8R-oRq">
+                                                        <rect key="frame" x="5" y="5" width="44" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="XzH-8R-oRq" secondAttribute="trailing" constant="5" id="dDM-J2-oOK"/>
+                                                    <constraint firstItem="XzH-8R-oRq" firstAttribute="top" secondItem="yhs-5P-870" secondAttribute="top" constant="5" id="jcU-9O-M3O"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XzH-8R-oRq" secondAttribute="bottom" constant="5" id="o9K-kd-Jhf"/>
+                                                    <constraint firstItem="XzH-8R-oRq" firstAttribute="leading" secondItem="yhs-5P-870" secondAttribute="leading" constant="5" id="q8q-3E-diP"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="XzH-8R-oRq" id="e8Y-mB-KSS"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nxw-59-Tev" secondAttribute="trailing" id="15M-CZ-Ump"/>
+                                    <constraint firstAttribute="bottom" secondItem="nxw-59-Tev" secondAttribute="bottom" id="2sb-oc-S6z"/>
+                                    <constraint firstItem="nxw-59-Tev" firstAttribute="leading" secondItem="3kx-hb-OMW" secondAttribute="leading" id="jno-5V-rFb"/>
+                                    <constraint firstItem="nxw-59-Tev" firstAttribute="top" secondItem="3kx-hb-OMW" secondAttribute="top" id="tdz-vh-sLj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="nxw-59-Tev" id="SRB-Oc-vSR"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-OE-43Z" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gQX-H5-VE6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tv8-sI-FTW" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckd-zh-2Li">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="ckd-zh-2Li" firstAttribute="leading" secondItem="tv8-sI-FTW" secondAttribute="leading" constant="5" id="Gfq-qL-WHe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ckd-zh-2Li" secondAttribute="bottom" constant="5" id="PVn-e5-A8s"/>
+                                                    <constraint firstItem="ckd-zh-2Li" firstAttribute="top" secondItem="tv8-sI-FTW" secondAttribute="top" constant="5" id="QyB-RJ-8py"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ckd-zh-2Li" secondAttribute="trailing" constant="5" id="TLi-tN-sg9"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="ckd-zh-2Li" id="p5y-h0-E2f"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuH-Pa-70C" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ri-lB-fox">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="5Ri-lB-fox" secondAttribute="bottom" constant="5" id="96V-pf-ssA"/>
+                                                    <constraint firstItem="5Ri-lB-fox" firstAttribute="top" secondItem="ZuH-Pa-70C" secondAttribute="top" constant="5" id="Ead-xv-aBv"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5Ri-lB-fox" secondAttribute="trailing" constant="5" id="gKM-d8-OdX"/>
+                                                    <constraint firstItem="5Ri-lB-fox" firstAttribute="leading" secondItem="ZuH-Pa-70C" secondAttribute="leading" constant="5" id="yM8-RB-M6x"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="5Ri-lB-fox" id="b9w-2e-jPW"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-vM-3ZB" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqN-kf-sQX">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="YqN-kf-sQX" firstAttribute="leading" secondItem="qh1-vM-3ZB" secondAttribute="leading" constant="5" id="8kS-AH-OXE"/>
+                                                    <constraint firstItem="YqN-kf-sQX" firstAttribute="top" secondItem="qh1-vM-3ZB" secondAttribute="top" constant="5" id="ENX-NV-FgT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="YqN-kf-sQX" secondAttribute="trailing" constant="5" id="XV1-j6-bz5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="YqN-kf-sQX" secondAttribute="bottom" constant="5" id="j2a-iZ-Lye"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="YqN-kf-sQX" id="CP8-tQ-Enj"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-kx-JJ4" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alg-91-aE4">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="alg-91-aE4" firstAttribute="leading" secondItem="vBp-kx-JJ4" secondAttribute="leading" constant="5" id="Bvy-K1-6vn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="alg-91-aE4" secondAttribute="trailing" constant="5" id="FR2-9E-hlk"/>
+                                                    <constraint firstItem="alg-91-aE4" firstAttribute="top" secondItem="vBp-kx-JJ4" secondAttribute="top" constant="5" id="Ixx-hB-pv5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="alg-91-aE4" secondAttribute="bottom" constant="5" id="l7V-7k-rGc"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="alg-91-aE4" id="cu0-Cf-ZBr"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FsB-h0-Jeo" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkR-dW-daH">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="UkR-dW-daH" firstAttribute="top" secondItem="FsB-h0-Jeo" secondAttribute="top" constant="5" id="6wT-yK-7EK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UkR-dW-daH" secondAttribute="bottom" constant="5" id="MZa-gQ-STV"/>
+                                                    <constraint firstItem="UkR-dW-daH" firstAttribute="leading" secondItem="FsB-h0-Jeo" secondAttribute="leading" constant="5" id="wrr-C1-s7q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UkR-dW-daH" secondAttribute="trailing" constant="5" id="znN-Xf-5Qy"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="UkR-dW-daH" id="IzJ-HN-I3d"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-ck-mAV" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7F-56-Xxc">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Y7F-56-Xxc" secondAttribute="bottom" constant="5" id="cr9-Xz-n4I"/>
+                                                    <constraint firstItem="Y7F-56-Xxc" firstAttribute="top" secondItem="RZg-ck-mAV" secondAttribute="top" constant="5" id="db1-b2-veN"/>
+                                                    <constraint firstItem="Y7F-56-Xxc" firstAttribute="leading" secondItem="RZg-ck-mAV" secondAttribute="leading" constant="5" id="kSq-08-eZK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y7F-56-Xxc" secondAttribute="trailing" constant="5" id="kuj-f4-KSZ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Y7F-56-Xxc" id="lJB-nF-qhl"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRy-Qo-McZ" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-sl-Itj">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="4Sx-sl-Itj" secondAttribute="bottom" constant="5" id="EMP-z7-V32"/>
+                                                    <constraint firstItem="4Sx-sl-Itj" firstAttribute="top" secondItem="wRy-Qo-McZ" secondAttribute="top" constant="5" id="N4k-p3-rC0"/>
+                                                    <constraint firstItem="4Sx-sl-Itj" firstAttribute="leading" secondItem="wRy-Qo-McZ" secondAttribute="leading" constant="5" id="q8j-dp-h9Y"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4Sx-sl-Itj" secondAttribute="trailing" constant="5" id="sG9-Bp-gZk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="4Sx-sl-Itj" id="y3c-Z3-QqF"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gQX-H5-VE6" firstAttribute="top" secondItem="TF3-OE-43Z" secondAttribute="top" id="F9F-ac-H0H"/>
+                                    <constraint firstItem="gQX-H5-VE6" firstAttribute="leading" secondItem="TF3-OE-43Z" secondAttribute="leading" id="gmZ-9K-PZE"/>
+                                    <constraint firstAttribute="trailing" secondItem="gQX-H5-VE6" secondAttribute="trailing" id="n46-og-32V"/>
+                                    <constraint firstAttribute="bottom" secondItem="gQX-H5-VE6" secondAttribute="bottom" id="ugY-aH-Inf"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="gQX-H5-VE6" id="dY8-mb-4cg"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRg-ke-oyH" customClass="WeekView" customModule="Calendar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="250" width="375" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qM9-5f-j92">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlR-ZR-mj2" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBH-dZ-0EC">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="YBH-dZ-0EC" secondAttribute="bottom" constant="5" id="0ap-IN-Bco"/>
+                                                    <constraint firstItem="YBH-dZ-0EC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vlR-ZR-mj2" secondAttribute="leading" constant="5" id="gZo-RX-c2J"/>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="YBH-dZ-0EC" secondAttribute="trailing" constant="5" id="j3f-2D-j31"/>
+                                                    <constraint firstItem="YBH-dZ-0EC" firstAttribute="top" relation="lessThanOrEqual" secondItem="vlR-ZR-mj2" secondAttribute="top" constant="5" id="xeI-vj-qA2"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="YBH-dZ-0EC" id="T8b-RE-f14"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-Dd-hYt" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="53.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55Z-Hd-VyZ">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="55Z-Hd-VyZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Lgc-Dd-hYt" secondAttribute="leading" constant="5" id="2LO-ZC-gYl"/>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="55Z-Hd-VyZ" secondAttribute="trailing" constant="5" id="FJ8-6U-vnd"/>
+                                                    <constraint firstItem="55Z-Hd-VyZ" firstAttribute="top" relation="lessThanOrEqual" secondItem="Lgc-Dd-hYt" secondAttribute="top" constant="5" id="PWH-Ns-JgE"/>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="55Z-Hd-VyZ" secondAttribute="bottom" constant="5" id="iUL-Bo-7hI"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="55Z-Hd-VyZ" id="cvp-Y9-LID"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOJ-cF-dRv" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOA-09-wN3">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="LOA-09-wN3" secondAttribute="bottom" constant="5" id="4V8-V0-JTT"/>
+                                                    <constraint firstItem="LOA-09-wN3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="EOJ-cF-dRv" secondAttribute="leading" constant="5" id="8DU-GN-C9s"/>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="LOA-09-wN3" secondAttribute="trailing" constant="5" id="N5N-t1-a3Y"/>
+                                                    <constraint firstItem="LOA-09-wN3" firstAttribute="top" relation="lessThanOrEqual" secondItem="EOJ-cF-dRv" secondAttribute="top" constant="5" id="Yzq-My-R0r"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="LOA-09-wN3" id="vQZ-oL-117"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLM-Ai-Dha" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="160.5" y="0.0" width="54" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV0-w9-XwX">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="PV0-w9-XwX" secondAttribute="trailing" constant="5" id="8CY-tC-kDh"/>
+                                                    <constraint firstItem="PV0-w9-XwX" firstAttribute="leading" relation="lessThanOrEqual" secondItem="DLM-Ai-Dha" secondAttribute="leading" constant="5" id="bqO-Ls-Wp4"/>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="PV0-w9-XwX" secondAttribute="bottom" constant="5" id="fV7-ss-o3N"/>
+                                                    <constraint firstItem="PV0-w9-XwX" firstAttribute="top" relation="lessThanOrEqual" secondItem="DLM-Ai-Dha" secondAttribute="top" constant="5" id="mzo-hv-4vy"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="PV0-w9-XwX" id="7Ax-1I-aHZ"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFC-0K-P77" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="214.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu4-ra-DZb">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Cu4-ra-DZb" secondAttribute="trailing" constant="5" id="3pl-DA-p4f"/>
+                                                    <constraint firstItem="Cu4-ra-DZb" firstAttribute="top" relation="lessThanOrEqual" secondItem="XFC-0K-P77" secondAttribute="top" constant="5" id="D99-1E-G2w"/>
+                                                    <constraint firstItem="Cu4-ra-DZb" firstAttribute="leading" relation="lessThanOrEqual" secondItem="XFC-0K-P77" secondAttribute="leading" constant="5" id="b0I-LE-Vys"/>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Cu4-ra-DZb" secondAttribute="bottom" constant="5" id="tJP-Eo-Kh3"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Cu4-ra-DZb" id="4Gu-e0-39I"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-Ot-umG" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkv-q0-uR3">
+                                                        <rect key="frame" x="5" y="5" width="43" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="tkv-q0-uR3" firstAttribute="leading" relation="lessThanOrEqual" secondItem="vAx-Ot-umG" secondAttribute="leading" constant="5" id="HkB-oT-dNf"/>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="tkv-q0-uR3" secondAttribute="trailing" constant="5" id="Kpo-J9-u9q"/>
+                                                    <constraint firstItem="tkv-q0-uR3" firstAttribute="top" relation="lessThanOrEqual" secondItem="vAx-Ot-umG" secondAttribute="top" constant="5" id="gM9-ck-P5n"/>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="tkv-q0-uR3" secondAttribute="bottom" constant="5" id="q3B-4Y-Gbu"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="tkv-q0-uR3" id="Qg4-iu-MSI"/>
+                                                </connections>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-N9-i8p" customClass="DayView" customModule="Calendar" customModuleProvider="target">
+                                                <rect key="frame" x="321.5" y="0.0" width="53.5" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufn-4Q-OJh">
+                                                        <rect key="frame" x="5" y="5" width="44" height="40.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ufn-4Q-OJh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Rgq-N9-i8p" secondAttribute="leading" constant="5" id="42r-YM-2aO"/>
+                                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Ufn-4Q-OJh" secondAttribute="bottom" constant="5" id="UDV-ye-KZf"/>
+                                                    <constraint firstItem="Ufn-4Q-OJh" firstAttribute="top" relation="lessThanOrEqual" secondItem="Rgq-N9-i8p" secondAttribute="top" constant="5" id="VlC-gd-iSc"/>
+                                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Ufn-4Q-OJh" secondAttribute="trailing" constant="5" id="maq-MN-23w"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="Ufn-4Q-OJh" id="smv-PB-gpH"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qM9-5f-j92" firstAttribute="top" secondItem="JRg-ke-oyH" secondAttribute="top" id="Kjc-WQ-ujo"/>
+                                    <constraint firstAttribute="bottom" secondItem="qM9-5f-j92" secondAttribute="bottom" id="fHm-Bp-baF"/>
+                                    <constraint firstItem="qM9-5f-j92" firstAttribute="leading" secondItem="JRg-ke-oyH" secondAttribute="leading" id="fI4-Ia-NNn"/>
+                                    <constraint firstAttribute="trailing" secondItem="qM9-5f-j92" secondAttribute="trailing" id="jMr-df-kFV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stackView" destination="qM9-5f-j92" id="QNu-f1-Yzp"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fIj-dB-FIJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GbF-6L-KnD"/>
+                <constraint firstItem="0dF-NO-FL6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KJC-Re-FVq"/>
+                <constraint firstAttribute="trailing" secondItem="fIj-dB-FIJ" secondAttribute="trailing" id="NPg-Wu-XkB"/>
+                <constraint firstItem="fIj-dB-FIJ" firstAttribute="top" secondItem="0dF-NO-FL6" secondAttribute="bottom" id="Z79-Nl-Hrh"/>
+                <constraint firstItem="0dF-NO-FL6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f23-P1-tbz"/>
+                <constraint firstAttribute="bottom" secondItem="fIj-dB-FIJ" secondAttribute="bottom" id="s5H-fx-D8A"/>
+                <constraint firstAttribute="trailing" secondItem="0dF-NO-FL6" secondAttribute="trailing" id="zga-8A-hzT"/>
+            </constraints>
+            <connections>
+                <outlet property="stackView" destination="fIj-dB-FIJ" id="2HD-lt-0ep"/>
+                <outlet property="titleLabel" destination="xTb-eP-X2u" id="en3-XW-ipH"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
